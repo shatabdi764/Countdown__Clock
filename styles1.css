@@ -51,12 +51,16 @@ body {
 .countdown-clock-wrapper {
   margin: auto;
   text-align: center;
+  background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
 
 .clock {
   font-size: 180px;
+  line-height: 18px;
+  background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
 
 .back-at {
   font-size: 23px;
+  background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }

@@ -15,7 +15,7 @@ function startTimer(seconds) {
   displayBackAt(then);
 
   timer = setInterval(() => {
-    let secsLeft = Math.round((then - Date.now()) / 1000);
+    let secsLeft = Math.round((then - Date.now()) / 100);
 
     if (secsLeft < 0) {
       clearInterval(timer);
@@ -23,7 +23,7 @@ function startTimer(seconds) {
     }
 
     displayTimeLeft(secsLeft);
-  }, 1000);
+  }, 100);
 }
 
 function displayTimeLeft(secsLeft) {
@@ -47,7 +47,7 @@ function formatTime(time) {
 
 function setSeconds(e) {
   let value = parseInt(this.value),
-      secs = e.type === 'click' ? value : value * 60;
+      secs = e.type === 'click' ? value*10 : value * 60;
 
   startTimer(secs);
 }
